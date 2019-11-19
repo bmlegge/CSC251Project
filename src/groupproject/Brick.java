@@ -107,7 +107,7 @@ public class Brick
         }
         catch(FileNotFoundException e)
         {
-            System.out.println("File not fount.");
+            System.out.println("File not found.");
         }
     }    
 }   
