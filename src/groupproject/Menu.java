@@ -14,13 +14,12 @@ public class Menu
         try
         {
             System.out.println(
-                    "                      Menu                        "
+                    "\n                      Menu                      "
                    +"\n------------------------------------------------"
-                   +"\n1. Brick Selection"          // Brick Class
-                   +"\n2."//
-                   +"\n3."//
-                   +"\n4."// 
-                   +"\n5. Exit Program "            //Exits the program
+                   +"\n1. Brick    "          // Brick Class
+                   +"\n2. Concrete "          // Concrete Class 
+                   +"\n3. Cost     "          // Cost Class
+                   +"\n4. Exit Program "     //Exits the program
                    +"\n------------------------------------------------"
                    +"\n\nEnter a number from the menu: "); 
             System.out.print(">> "); 

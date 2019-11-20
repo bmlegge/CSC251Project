@@ -28,16 +28,18 @@ public class Main
                         Brick.BrickMenu();
                         break;
                     case 2:
+                        Concrete.ConcreteMenu();
                         break;
                     case 3:
+                        Cost.Cost1Menu();
                         break;
                     case 4:
-                        break;
-                    case 5:
                         System.exit(0);
                         break;      
                     default: 
-                        System.out.println(" Error ");
+                        System.out.println("");
+                        System.out.println("Please Make A Selection"
+                                         + " From The Menu! ");
                         break;
                 }            
             }               
