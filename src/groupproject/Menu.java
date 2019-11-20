@@ -16,11 +16,11 @@ public class Menu
             System.out.println(
                     "                      Menu                        "
                    +"\n------------------------------------------------"
-                   +"\n1. Brick Selection"// 
+                   +"\n1. Brick Selection"          // Brick Class
                    +"\n2."//
                    +"\n3."//
                    +"\n4."// 
-                   +"\n5. Exit "//Exit program
+                   +"\n5. Exit Program "            //Exits the program
                    +"\n------------------------------------------------"
                    +"\n\nEnter a number from the menu: "); 
             System.out.print(">> "); 
