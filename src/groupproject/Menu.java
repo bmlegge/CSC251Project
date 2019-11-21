@@ -19,13 +19,12 @@ public class Menu
                    +"\n1. Brick    "          // Brick Class
                    +"\n2. Concrete "          // Concrete Class 
                    +"\n3. Cost     "          // Cost Class
-                   +"\n4. Exit Program "     //Exits the program
+                   +"\n4. Exit Program "      // Exits the program
                    +"\n------------------------------------------------"
                    +"\n\nEnter a number from the menu: "); 
             System.out.print(">> "); 
             input = keyboard.nextLine();
             userMenuSelection = Integer.parseInt(input); //Convert str to int  
-  
         }
         catch(NumberFormatException e)
         {                         
