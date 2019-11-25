@@ -18,14 +18,15 @@ public class Main
           do
           {
             userMenuSelection = Menu.DisplayMenu(userMenuSelection, keyboard, 
-                    input);       
+                    input);
+         
             try
             {
                 //Decision Structure
                 switch(userMenuSelection)
                 {
                     case 1:
-                        Brick.ReadFile();
+                        Brick.BrickMenu();
                         break;
                     case 2:
                         Concrete.ConcreteMenu();
