@@ -2,10 +2,7 @@
  * Brick Class
  */
 package groupproject;
-//import java.io.File;
-//import java.io.FileNotFoundException;
-//import java.util.ArrayList;
-//import java.util.Scanner;
+
 import java.util.Scanner;
 import java.io.*;
 import java.util.ArrayList;
@@ -14,17 +11,6 @@ import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
-
-//public class Brick 
-//{
-////    public static void BrickMenu()
-////    {
-////        System.out.println("");
-////        System.out.println(" Brick class test");
-////    }
-//}
-
-
 
 public class Brick 
 {
@@ -114,7 +100,7 @@ public class Brick
         
         try
         {
-            while((line = br.readLine()) != null && !line.isEmpty())          
+            while((line = br.readLine()) != null && !line.isEmpty())//Skips header in the .csv           
             {
                 String[] fields = line.split(",");
 
@@ -125,27 +111,25 @@ public class Brick
                           Double.parseDouble(fields[3]), 
                           fields[4], 
                           Double.parseDouble(fields[5])));
-
                 
                 // Prints out values from the .csv
                 System.out.println("Brick name is " + fields[0] +
                         " Brick length is  1"
-                                + "" + fields[1] + 
+                                + ""         + fields[1] + 
                         " Brick height is  " + fields[2] +
                         " Brick width  is  " + fields[3] +
                         " Brick color  is  " + fields[4] +
                         " Brick costs  is $" + fields[5] + ".");
             }
-            br.close();
+            br.close(); //close the file 
         }
         catch(FileNotFoundException e)
         {
-            System.out.println("File not found.");
-                    
-                    
+            System.out.println("File not found.");                                  
         }
     }    
 }   
 
-
-//https://javarevisited.blogspot.com/2015/06/2-ways-to-parse-csv-files-in-java-example.html
+/* Web site for csv creation(reference)
+//https://javarevisited.blogspot.com/2015/06/2-ways-to-parse-csv-files-in-java-example
+*/

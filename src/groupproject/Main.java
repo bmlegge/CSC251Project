@@ -5,10 +5,12 @@ package groupproject;
 
 import java.util.Scanner;
 import java.util.*;
+import java.io.FileNotFoundException;
+import java.io.IOException;
 
 public class Main 
 {
-      public static void main(String[] args)
+      public static void main(String[] args) throws IOException
       {
           String input = "";
           boolean exit = false;
