@@ -3,11 +3,52 @@
 */
 package groupproject;
 
+import java.util.InputMismatchException;
 import java.util.Scanner; 
 
 public class Menu 
 {
-    public static int DisplayMenu(int userMenuSelection, Scanner keyboard,
+    public static void selectOption()
+    {   
+        String input = "";
+        boolean exit = false;
+        int userMenuSelection = 0;
+        Scanner keyboard = new Scanner(System.in);
+               
+          do
+          {
+            userMenuSelection = Menu.displayMenu(userMenuSelection, keyboard, 
+                    input);       
+            try
+            {
+                //Decision Structure
+                switch(userMenuSelection)
+                {
+                    case 1:
+                        Build.brickSelection();
+                        break;
+                    case 2:
+                        Build.concreteSelection();
+                        break;
+                    case 3:
+                        Build.displayCost(); 
+                        break;
+                    case 4:
+                        System.exit(0);
+                        break;      
+                    default: 
+                        System.out.println("");
+                        System.out.println("Please Make A Selection"
+                                         + " From The Menu! ");
+                        break;
+                }            
+            }               
+            catch(InputMismatchException e)
+            {
+            }    
+          }while(exit == false);      
+    }
+    public static int displayMenu(int userMenuSelection, Scanner keyboard,
             String input)
     {
         try
@@ -26,9 +67,10 @@ public class Menu
             input = keyboard.nextLine();
             userMenuSelection = Integer.parseInt(input); //Convert str to int  
         }
-        catch(NumberFormatException e) // Catches errors or incorrect input
-        {                         
+        catch(NumberFormatException e) 
+        {           
+            // Catches errors or incorrect input
         }       
-        return userMenuSelection;
+        return userMenuSelection;      
     }
 }

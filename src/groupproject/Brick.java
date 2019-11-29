@@ -20,6 +20,7 @@ public class Brick
     private double _width;
     private String _color;
     private double _cost;
+    private List<String> bricks;
     
     public Brick(String name, double l, double h, double w, String color, double cost)
     {
@@ -90,10 +91,11 @@ public class Brick
     {
         return _cost;
     }
+   
     
     public static void ReadFile() throws FileNotFoundException, IOException
     {
-        List bricks = new ArrayList<>();    
+        List bricks = new ArrayList<String>();    
         BufferedReader br = new BufferedReader(new FileReader("brick.csv"));
         
         String line = br.readLine(); // Reading header, Ignoring'
@@ -111,15 +113,6 @@ public class Brick
                           Double.parseDouble(fields[3]), 
                           fields[4], 
                           Double.parseDouble(fields[5])));
-                
-                // Prints out values from the .csv
-                System.out.println("Brick name is " + fields[0] +
-                        " Brick length is  1"
-                                + ""         + fields[1] + 
-                        " Brick height is  " + fields[2] +
-                        " Brick width  is  " + fields[3] +
-                        " Brick color  is  " + fields[4] +
-                        " Brick costs  is $" + fields[5] + ".");
             }
             br.close(); //close the file 
         }
@@ -130,6 +123,3 @@ public class Brick
     }    
 }   
 
-/* Web site for csv creation(reference)
-//https://javarevisited.blogspot.com/2015/06/2-ways-to-parse-csv-files-in-java-example
-*/
