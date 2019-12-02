@@ -20,7 +20,7 @@ public class Brick
     private double _width;
     private String _color;
     private double _cost;
-    private List<String> bricks;
+    
     
     public Brick(String name, double l, double h, double w, String color, double cost)
     {
@@ -95,10 +95,10 @@ public class Brick
     
     public static void ReadFile() throws FileNotFoundException, IOException
     {
-        List bricks = new ArrayList<String>();    
+        List bricks = new ArrayList<>();    
         BufferedReader br = new BufferedReader(new FileReader("brick.csv"));
         
-        String line = br.readLine(); // Reading header, Ignoring'
+        String line = br.readLine(); // Reading file
         
         try
         {
@@ -115,7 +115,8 @@ public class Brick
                           Double.parseDouble(fields[5])));
             }
             br.close(); //close the file 
-        }
+       }
+        
         catch(FileNotFoundException e)
         {
             System.out.println("File not found.");                                  

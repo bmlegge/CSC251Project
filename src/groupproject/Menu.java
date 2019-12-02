@@ -3,12 +3,14 @@
 */
 package groupproject;
 
+import java.io.FileNotFoundException;
+import java.io.IOException;
 import java.util.InputMismatchException;
 import java.util.Scanner; 
 
 public class Menu 
 {
-    public static void selectOption()
+    public static void selectOption()throws FileNotFoundException,IOException
     {   
         String input = "";
         boolean exit = false;
@@ -25,7 +27,7 @@ public class Menu
                 switch(userMenuSelection)
                 {
                     case 1:
-                        Build.brickSelection();
+                        Build.brickSelection(); 
                         break;
                     case 2:
                         Build.concreteSelection();
@@ -43,10 +45,10 @@ public class Menu
                         break;
                 }            
             }               
-            catch(InputMismatchException e)
+            catch(InputMismatchException e) //catches errors 
             {
             }    
-          }while(exit == false);      
+          }while(exit == false);  // keeps the menu in a loop     
     }
     public static int displayMenu(int userMenuSelection, Scanner keyboard,
             String input)
@@ -64,7 +66,7 @@ public class Menu
                    +"\n------------------------------------------------"
                    +"\n\nEnter a number from the menu: "); 
             System.out.print(">> "); 
-            input = keyboard.nextLine();
+            input = keyboard.nextLine(); //stores the user input 
             userMenuSelection = Integer.parseInt(input); //Convert str to int  
         }
         catch(NumberFormatException e) 

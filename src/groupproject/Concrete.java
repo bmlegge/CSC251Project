@@ -52,7 +52,7 @@ public class Concrete
         List bricks = new ArrayList<>();    
         BufferedReader br = new BufferedReader(new FileReader("Concrete.csv"));
         
-        String line = br.readLine(); // Reading header, Ignoring'
+        String line = br.readLine(); // Reading file
         
         try
         {
