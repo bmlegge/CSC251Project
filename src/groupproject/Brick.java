@@ -1,21 +1,7 @@
 /*
-<<<<<<< HEAD
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
-package groupproject;
-
-/**
  *
- * @author Brandon
  */
-public class Brick {
-    
-}
-=======
- * Brick Class
- */
+
 package groupproject;
 
 import java.util.Scanner;
@@ -139,9 +125,3 @@ public class Brick
     }    
 }   
 
-<<<<<<< HEAD
-
-//https://javarevisited.blogspot.com/2015/06/2-ways-to-parse-csv-files-in-java-example.html
->>>>>>> Winston_Dev
-=======
->>>>>>> Winston_Dev
