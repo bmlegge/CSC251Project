@@ -37,6 +37,16 @@ public class Concrete
         _cost = cost;
     }
     
+    public void setFeatures(String features)
+    {
+        _features = features;
+    }
+    
+    public void setPounds(double pounds)
+    {
+        _pounds = pounds;
+    }
+    
     public String getName()
     {
         return _name;
@@ -45,6 +55,16 @@ public class Concrete
     public double getCost()
     {
         return _cost;
+    }
+    
+    public String getFeature()
+    {
+        return _features;
+    }
+    
+    public double getPounds()
+    {
+        return _pounds;
     }
     
     public static void ReadFile() throws FileNotFoundException, IOException
