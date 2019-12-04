@@ -1,3 +1,6 @@
 Name,Length,Height ,Width ,Color ,Cost
-Brick A,10,20,5,red ,2.5
-Brick B,15,25,2,maroon,3
+Amaretto,10,20,5,red ,2.5
+Burgundy,15,25,2,maroon,3
+Bayou Deview,16,8,4,Grey,1.1
+BurntPumpkin,8,4,2,Beige,0.59
+Canyon Brown,8,4,2,Brown,0.79
