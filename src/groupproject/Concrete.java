@@ -69,7 +69,6 @@ public class Concrete
     
     public static void ReadFile() throws FileNotFoundException, IOException
     {
-        List bricks = new ArrayList<>();    
         BufferedReader br = new BufferedReader(new FileReader("Concrete.csv"));
         
         String line = br.readLine(); // Reading file
@@ -80,7 +79,7 @@ public class Concrete
             {
                 String[] fields = line.split(",");
 
-                bricks.add(new Concrete 
+                Lists.newConcrete.add(new Concrete 
                (fields[0], 
                 Double.parseDouble(fields[1]),
                 fields[2],
