@@ -96,7 +96,6 @@ public class Brick
     
     public static void ReadFile() throws FileNotFoundException, IOException
     {
-        List bricks = new ArrayList<>();    
         BufferedReader br = new BufferedReader(new FileReader("brick.csv"));
         
         String line = br.readLine(); // Reading file
@@ -107,7 +106,7 @@ public class Brick
             {
                 String[] fields = line.split(",");
 
-                bricks.add(new Brick
+                Lists.newBricks.add(new Brick
                          (fields[0],
                           Double.parseDouble(fields[1]), 
                           Double.parseDouble(fields[2]), 
