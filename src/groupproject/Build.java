@@ -25,31 +25,36 @@ public class Build
         switch(userInput)
         {
             case 1:
-                Wall.BuildBrickPart(Lists.newBricks.get(0).getLength(), 
+                Wall.BuildBrickWall(Lists.newBricks.get(0).getLength(), 
                                Lists.newBricks.get(0).getHeight(), 
                                Lists.newBricks.get(0).getWidth());
                 break;
             case 2:
-                Wall.BuildBrickPart(Lists.newBricks.get(1).getLength(),
+                Wall.BuildBrickWall(Lists.newBricks.get(1).getLength(),
                                Lists.newBricks.get(1).getHeight(),
                                Lists.newBricks.get(1).getWidth());
                 break;
             case 3:
-                Wall.BuildBrickPart(Lists.newBricks.get(2).getLength(),
+                Wall.BuildBrickWall(Lists.newBricks.get(2).getLength(),
                                Lists.newBricks.get(2).getHeight(),
                                Lists.newBricks.get(2).getWidth());
                 break;
             case 4:
-                Wall.BuildBrickPart(Lists.newBricks.get(3).getLength(),
+                Wall.BuildBrickWall(Lists.newBricks.get(3).getLength(),
                                Lists.newBricks.get(3).getHeight(),
                                Lists.newBricks.get(3).getWidth());
                 break;
             case 5:
-                Wall.BuildBrickPart(Lists.newBricks.get(4).getLength(),
+                Wall.BuildBrickWall(Lists.newBricks.get(4).getLength(),
                                Lists.newBricks.get(4).getHeight(),
                                Lists.newBricks.get(4).getWidth());
                 break;
-            case 6:                     //To quit program while testing.
+            case 6:
+                Wall.BuildBrickWall(Lists.newBricks.get(5).getLength(),
+                               Lists.newBricks.get(5).getHeight(),
+                               Lists.newBricks.get(5).getWidth());
+                break;
+            case 7:                     //To quit program while testing.
                 exit = true;
                 break;
             default:
