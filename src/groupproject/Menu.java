@@ -27,15 +27,19 @@ public class Menu
                 switch(userMenuSelection)
                 {
                     case 1:
+                        //** Testing *****
+                        Wall.BuildBrickWall(userMenuSelection, userMenuSelection, 
+                                            userMenuSelection);
+                    case 2:
                         Build.brickSelection(); 
                         break;
-                    case 2:
+                    case 3:
                         Build.concreteSelection();
                         break;
-                    case 3:
+                    case 4:
                         Build.displayCost(); 
                         break;
-                    case 4:
+                    case 5:
                         System.exit(0);
                         break;      
                     default: 
@@ -59,10 +63,11 @@ public class Menu
             System.out.println(
                     "\n                      Menu                      "
                    +"\n------------------------------------------------"
-                   +"\n1. Brick    "          // Brick Class
-                   +"\n2. Concrete "          // Concrete Class 
-                   +"\n3. Cost     "          // Cost Class
-                   +"\n4. Exit Program "      // Exits the program
+                   +"\n1. Enter wall dimensions "         
+                   +"\n2. Choose Brick Type     "          // Brick Class
+                   +"\n3. Choose Concrete Type  "          // Concrete Class 
+                   +"\n4. Diplay Total Cost     "          // Cost Class
+                   +"\n5. Exit Program "      // Exits the program
                    +"\n------------------------------------------------"
                    +"\n\nEnter a number from the menu: "); 
             System.out.print(">> "); 

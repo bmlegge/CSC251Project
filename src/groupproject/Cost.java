@@ -7,10 +7,11 @@ import java.util.Scanner;
 
 public class Cost
 {
-      public static void CostMenu()
+    public static void CostMenu()
     {
-        //This is just to test the menu; for working purposes
+        //Displays the overall cost to user 
+          
         System.out.println("");
-        System.out.println(" Cost class test");
+        System.out.println(" ");
     }    
 }

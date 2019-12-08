@@ -14,45 +14,50 @@ public class Build
     
     public static void brickSelection() throws IOException
     {  
-        System.out.println("\nPlease choose which brick you will use:\n");
+        System.out.println("\nPlease choose which brick you will use: \n");       
+        System.out.println("Brick\t\t " + "Type\t\t " + "Cost" + 
+                           "\n-------------------------------------");
         for(int i = 0; i < Lists.newBricks.size(); i++)
         {
-            System.out.println("Brick "+(i+1)+": " + Lists.newBricks.get(i).getName());
-        }
-        System.out.print("> ");
+            System.out.println("Brick " +(i+1) + ": " + "\t"+
+                    Lists.newBricks.get(i).getName());
+        }   
+        System.out.println("\nEnter a number between (1-6) ");
+        System.out.print(">> ");
+        
         int userInput = keyboard.nextInt();
         
         switch(userInput)
         {
             case 1:
                 Wall.BuildBrickWall(Lists.newBricks.get(0).getLength(), 
-                               Lists.newBricks.get(0).getHeight(), 
-                               Lists.newBricks.get(0).getWidth());
+                                    Lists.newBricks.get(0).getHeight(), 
+                                    Lists.newBricks.get(0).getWidth());
                 break;
             case 2:
                 Wall.BuildBrickWall(Lists.newBricks.get(1).getLength(),
-                               Lists.newBricks.get(1).getHeight(),
-                               Lists.newBricks.get(1).getWidth());
+                                    Lists.newBricks.get(1).getHeight(),
+                                    Lists.newBricks.get(1).getWidth());
                 break;
             case 3:
                 Wall.BuildBrickWall(Lists.newBricks.get(2).getLength(),
-                               Lists.newBricks.get(2).getHeight(),
-                               Lists.newBricks.get(2).getWidth());
+                                    Lists.newBricks.get(2).getHeight(),
+                                    Lists.newBricks.get(2).getWidth());
                 break;
             case 4:
                 Wall.BuildBrickWall(Lists.newBricks.get(3).getLength(),
-                               Lists.newBricks.get(3).getHeight(),
-                               Lists.newBricks.get(3).getWidth());
+                                    Lists.newBricks.get(3).getHeight(),
+                                    Lists.newBricks.get(3).getWidth());
                 break;
             case 5:
                 Wall.BuildBrickWall(Lists.newBricks.get(4).getLength(),
-                               Lists.newBricks.get(4).getHeight(),
-                               Lists.newBricks.get(4).getWidth());
+                                    Lists.newBricks.get(4).getHeight(),
+                                    Lists.newBricks.get(4).getWidth());
                 break;
             case 6:
                 Wall.BuildBrickWall(Lists.newBricks.get(5).getLength(),
-                               Lists.newBricks.get(5).getHeight(),
-                               Lists.newBricks.get(5).getWidth());
+                                    Lists.newBricks.get(5).getHeight(),
+                                    Lists.newBricks.get(5).getWidth());
                 break;
             case 7:                     //To quit program while testing.
                 exit = true;
