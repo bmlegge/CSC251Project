@@ -26,7 +26,7 @@ public class Build
                     Lists.newBricks.get(i).getHeight()+ "\t$"+ 
                     Lists.newBricks.get(i).getCost  ()); 
         }   
-        System.out.println("\nEnter a number between(1-6) Enter(7)to go back to the menu ");
+        System.out.println("\nEnter a number between(1-6) Enter(7) to go back to the menu ");
         System.out.print(">> ");
         
         int userInput = keyboard.nextInt();
@@ -85,7 +85,7 @@ public class Build
                     Lists.newConcrete.get(i).getPounds ()+ "\t$"+      
                     Lists.newConcrete.get(i).getCost   ());
         }
-         System.out.println("\nEnter a number between(1-4) Enter(5)to go back to the menu ");
+         System.out.println("\nEnter a number between(1-4) Enter(5) to go back to the menu ");
         System.out.print(">> ");
         int userInput = keyboard.nextInt();
 
@@ -111,8 +111,7 @@ public class Build
                 System.out.println("Please Make A Selection From The Menu!");
                 break;
         }
-    }
-    
+    }   
     public static void displayCost()
     {
         System.out.println("This is a test 3");

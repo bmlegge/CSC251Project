@@ -76,15 +76,15 @@ public class Wall
         
          
         
-        System.out.println("Rows:" +numOfRows +
-                "\nBricks Across: " +bricksAcrossRow +
-                "\nTotal Bricks: " + totalBricks);
+        System.out.println("Rows: " + numOfRows +
+                "\nBricks Across: " + bricksAcrossRow +
+                "\nTotal Brick  : " + totalBricks);
         
         
     }
     
     public static void BuildConcretePart(double pounds)
     {
-        System.out.println("pounds: " +pounds);
+
     }
 }
