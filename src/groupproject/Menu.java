@@ -28,8 +28,8 @@ public class Menu
                 {
                     case 1:
                         //** Testing *****
-                        Wall.BuildBrickWall(userMenuSelection, userMenuSelection, 
-                                            userMenuSelection);
+                      //  Wall.BuildBrickWall(userMenuSelection, userMenuSelection, 
+                      //                      userMenuSelection);
                     case 2:
                         Build.brickSelection(); 
                         break;

@@ -15,14 +15,18 @@ public class Build
     public static void brickSelection() throws IOException
     {  
         System.out.println("\nPlease choose which brick you will use: \n");       
-        System.out.println("Brick\t\t " + "Type\t\t " + "Cost" + 
-                           "\n-------------------------------------");
+        System.out.println("Brick\t " + "Type\t\t" + "Length\t " + "Width\t" + "Height\t" + "Cost" + 
+                     "\n-----------------------------------------------------");
         for(int i = 0; i < Lists.newBricks.size(); i++)
         {
-            System.out.println("Brick " +(i+1) + ": " + "\t"+
-                    Lists.newBricks.get(i).getName());
+            System.out.println((i+1) + "\t "+
+                    Lists.newBricks.get(i).getName  ()+ "\t"+                   
+                    Lists.newBricks.get(i).getLength()+ "\t"+ 
+                    Lists.newBricks.get(i).getWidth ()+ "\t"+
+                    Lists.newBricks.get(i).getHeight()+ "\t$"+ 
+                    Lists.newBricks.get(i).getCost  ()); 
         }   
-        System.out.println("\nEnter a number between (1-6) ");
+        System.out.println("\nEnter a number between(1-6) Enter(7)to go back to the menu ");
         System.out.print(">> ");
         
         int userInput = keyboard.nextInt();
@@ -67,16 +71,22 @@ public class Build
                 System.out.println("Please Make A Selection From The Menu!");
                 break;            
         }
-    }
-    
+    }   
     public static void concreteSelection()
     {
-        System.out.println("\nPlease choose which concreate you will use.\n");
+        System.out.println("\nPlease choose which concrete you will use.\n");
+        System.out.println("Concrete\t " + "Type\t\t" + "Weight\t " + "Cost" + 
+                     "\n-----------------------------------------------------");
         for(int i = 0; i < Lists.newConcrete.size(); i++)
         {
-            System.out.println("Concrete "+(i+1)+ ": " + Lists.newConcrete.get(i).getName());
+            System.out.println((i+1)+ ": " + 
+                    Lists.newConcrete.get(i).getName   ()+ "\t"+     
+                    Lists.newConcrete.get(i).getFeature()+ "\t"+     
+                    Lists.newConcrete.get(i).getPounds ()+ "\t$"+      
+                    Lists.newConcrete.get(i).getCost   ());
         }
-        System.out.print("> ");
+         System.out.println("\nEnter a number between(1-4) Enter(5)to go back to the menu ");
+        System.out.print(">> ");
         int userInput = keyboard.nextInt();
 
         switch(userInput)
