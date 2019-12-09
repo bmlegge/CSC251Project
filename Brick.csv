@@ -1,6 +1,6 @@
-Name,Length,Height ,Width ,Color ,Cost
-Amaretto,10,20,5,red ,2.5
-Burgundy,15,25,2,maroon,3
-Bayou Deview,16,8,4,Grey,1.1
-Burnt Pumpkin,8,4,2,Beige,0.59
-Regular,8,3.625,2.25,red ,0.89
+Name,Length,Height ,Width ,Cost
+Modular  ,7.625,2.25,3.625,0.59
+Queen    ,7.625,2.75,3.125,0.69
+Standard,8,2.25,3.625,0.79
+Jumbo    ,8,2.75,3.625,0.75
+King       ,9.625,2.625,3.125,1.09
