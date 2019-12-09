@@ -13,7 +13,6 @@ public class Main
     {
         Brick.ReadFile();
         Concrete.ReadFile();
-        //Calls the menu to display to the user 
         Menu.selectOption(); 
     }
 }

@@ -7,10 +7,15 @@ import java.util.Scanner;
 
 public class Cost
 {
-      public static void CostMenu()
+    public static void CostMenu()
     {
-        //This is just to test the menu; for working purposes
-        System.out.println("");
-        System.out.println(" Cost class test");
+        /*Displays the overall cost to user 
+         - Dimensions
+         - type_brick
+         - type_concrete
+        
+        *Based on the above this is how much everything will cost,
+        */
+
     }    
 }
