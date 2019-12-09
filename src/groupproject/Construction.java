@@ -10,7 +10,7 @@ public class Construction
     public static Scanner keyboard = new Scanner(System.in);
     public static final double MORTAR=0.375;
     
-    public static void BuildPlanterWall(double l, double h, double w)
+    public static void BuildWalkwayWall(double l, double h, double w, double brickCost, double mortarCost)
     {
         double height = h+MORTAR;//4
         double length = l+MORTAR; //8.375
@@ -21,21 +21,21 @@ public class Construction
         double numOfRows= wall_height/height;
         double bricksAcrossRow= (wall_length/length)+1;
         double totalBricks= (numOfRows*bricksAcrossRow) * 2;
+        
         double amountOfMortar = totalBricks/30;
         
-        System.out.println("The total number of bricks needed to build"
-                + "\nthe planter wall is: " + totalBricks);
+        double totalCost = (brickCost*totalBricks) + (mortarCost*amountOfMortar);
+       
+        System.out.println("\nThe total number of bricks needed to build"
+                + " the walkway wall is: " + String.format("%.0f", totalBricks));
         System.out.println("The total bags of mortar mix needed to build"
-                + "\nthe planter wall is: " + amountOfMortar);
-        
-//        System.out.println("Rows:" +numOfRows +
-//                "\nBricks Across: " +bricksAcrossRow +
-//                "\nTotal Bricks: " + totalBricks);
-        
-        BuildBrickWall(height,length, width);
+                + " the walkway wall is: " + String.format("%.0f", amountOfMortar));
+        System.out.println("The total cost to build this wall is: $" + String.format("%.2f", totalCost));
+
+        BuildBrickWall(height, length, width, brickCost, mortarCost);
     }
     
-    public static void BuildBrickWall(double l, double h, double w)
+    public static void BuildBrickWall(double l, double h, double w, double brickCost, double mortarCost)
     {
         double height = h+MORTAR;//4
         double length = l+MORTAR; //8.375
@@ -45,28 +45,52 @@ public class Construction
         
         double numOfRows= wall_height/height;
         double bricksAcrossRow= (wall_length/length)+1;
-        double totalBricks= (numOfRows*bricksAcrossRow) * 2; 
-        double amountOfMortar = totalBricks/30;
-
-        System.out.println("The total number of bricks needed to build"
-                + "\ndesign wall: " + totalBricks);
-        System.out.println("The total bags of mortar mix needed to build"
-                + "\nthe desing wall is: " + amountOfMortar);
+        double totalBricks= (numOfRows*bricksAcrossRow) * 2;
         
-//      System.out.println("Rows:" +numOfRows +
-//                "\nBricks Across: " +bricksAcrossRow +
-//                "\nTotal Bricks: " + totalBricks);
+        double amountOfMortar = totalBricks/30;
+        
+        double totalCost = (brickCost*totalBricks) + (mortarCost*amountOfMortar);
+
+        System.out.println("\nThe total number of bricks needed to build"
+                + " the divider wall: " + String.format("%.0f", totalBricks));
+        System.out.println("The total bags of mortar mix needed to build"
+                + " the divider wall is: " + String.format("%.0f", amountOfMortar));
+        System.out.println("The total cost to build this wall is: $" + String.format("%.2f", totalCost));
     }
     
-    public static void AmountOfMortar(double totalBricks)
+    public static void BuildConcreteRamp(double pounds, double cost)
     {
-        //Don't need?????
-    }
-    
-    public static void BuildConcretePart(double pounds)
-    {
-        //Used to calculate how much concrete needed for the
-        //construction of handicap ramp
-        System.out.println("pounds: " +pounds);
+        double rampWidth = 10;
+        double rampLength = 12;
+        double rampHeight = 16;
+        double volume = ((rampLength*rampHeight)/6)*((2*rampWidth)+rampWidth);
+        double totalBags = 0;
+        
+        if(pounds >= 20 && pounds < 40)
+        {
+            totalBags = volume/.15;
+        }
+        else if(pounds >=40 && pounds < 60)
+        {
+            totalBags = volume/.30;
+        }
+        else if(pounds >=60 && pounds < 80)
+        {
+            totalBags = volume/.45;
+        }
+        else if(pounds >=80)
+        {
+            totalBags = volume/.60;
+        }
+        else
+        {
+            System.out.println("Error");
+        }
+        
+        double totalCost = totalBags * cost;
+        
+        System.out.println("The total number of bags of concrete needed to build"
+                + " the ramp is: " +String.format("%.0f", totalBags));
+        System.out.println("The total cost to build the ramp is: $" +String.format("%.2f", totalCost));
     }
 }
