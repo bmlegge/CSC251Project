@@ -1,5 +1,5 @@
 /*
- *
+ * Brick Class
  */
 
 package groupproject;
@@ -15,24 +15,24 @@ import java.util.List;
 
 public class Brick 
 {
+    //field variables
     private String _name;
     private double _length;
     private double _height;
     private double _width;
-    private String _color;
     private double _cost;
     
-    
-    public Brick(String name, double l, double h, double w, String color, double cost)
+    //Constructor
+    public Brick(String name, double l, double h, double w, double cost)
     {
         _name = name;
         _length = l;
         _height = h;
         _width  = w;
-        _color  = color;
         _cost   = cost;
     }
     
+    //Setters
     public void setName(String name)
     {
         _name = name;
@@ -53,16 +53,12 @@ public class Brick
         _width = w;
     }
     
-    public void setColor(String color)
-    {
-        _color = color;
-    }
-    
     public void setCost(double cost)
     {
         _cost = cost;
     }
     
+    //Getters
     public String getName()
     {
         return _name;
@@ -83,17 +79,11 @@ public class Brick
         return _width;
     }
     
-    public String getColor()
-    {
-        return _color;
-    }
-    
     public double getCost()
     {
         return _cost;
     }
    
-    
     public static void ReadFile() throws FileNotFoundException, IOException
     {
         BufferedReader br = new BufferedReader(new FileReader("brick.csv"));
@@ -104,15 +94,15 @@ public class Brick
         {
             while((line = br.readLine()) != null && !line.isEmpty())//Skips header in the .csv           
             {
-                String[] fields = line.split(",");
+                String[] fields = line.split(",");  //splits the csv
 
+                //stores an instance of a brick into a list.
                 Lists.newBricks.add(new Brick
                          (fields[0],
                           Double.parseDouble(fields[1]), 
                           Double.parseDouble(fields[2]), 
                           Double.parseDouble(fields[3]), 
-                          fields[4], 
-                          Double.parseDouble(fields[5])));
+                          Double.parseDouble(fields[4])));
             }
             br.close(); //close the file 
        }

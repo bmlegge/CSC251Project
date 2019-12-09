@@ -18,6 +18,7 @@ public class Construction
         double wall_length= 1200;
         double wall_height= 24;  
         
+        //cacluations
         double numOfRows= wall_height/height;
         double bricksAcrossRow= (wall_length/length)+1;
         double totalBricks= (numOfRows*bricksAcrossRow) * 2;
@@ -26,6 +27,7 @@ public class Construction
         
         double totalCost = (brickCost*totalBricks) + (mortarCost*amountOfMortar);
        
+        //Displays output to user
         System.out.println("\nThe total number of bricks needed to build"
                 + " the walkway wall is: " + String.format("%.0f", totalBricks));
         System.out.println("The total bags of mortar mix needed to build"
@@ -43,6 +45,7 @@ public class Construction
         double wall_length= 720;//60 feet
         double wall_height= 84;//7 feet
         
+        //Calculations
         double numOfRows= wall_height/height;
         double bricksAcrossRow= (wall_length/length)+1;
         double totalBricks= (numOfRows*bricksAcrossRow) * 2;
@@ -50,7 +53,8 @@ public class Construction
         double amountOfMortar = totalBricks/30;
         
         double totalCost = (brickCost*totalBricks) + (mortarCost*amountOfMortar);
-
+        
+        //Displays output to user.
         System.out.println("\nThe total number of bricks needed to build"
                 + " the divider wall: " + String.format("%.0f", totalBricks));
         System.out.println("The total bags of mortar mix needed to build"
@@ -66,6 +70,8 @@ public class Construction
         double volume = ((rampLength*rampHeight)/6)*((2*rampWidth)+rampWidth);
         double totalBags = 0;
         
+        //ifelseif loop to determine how many bags of concrete will be need
+        //per cubic foot based on the weight of each bag.
         if(pounds >= 20 && pounds < 40)
         {
             totalBags = volume/.15;
@@ -87,8 +93,10 @@ public class Construction
             System.out.println("Error");
         }
         
+        //Calculation
         double totalCost = totalBags * cost;
         
+        //Display output to user.
         System.out.println("The total number of bags of concrete needed to build"
                 + " the ramp is: " +String.format("%.0f", totalBags));
         System.out.println("The total cost to build the ramp is: $" +String.format("%.2f", totalCost));
